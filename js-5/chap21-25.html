@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let firstName = prompt("Enter your first name:");
+let lastName = prompt("Enter your last name:");
+let fullName = firstName + " " + lastName;
+alert("Hello, " + fullName + "!");
+
+
+let phoneModel = prompt("Enter your favorite mobile phone model:");
+alert("Length of your input: " + phoneModel.length);
+
+
+let indexN = "Pakistani".indexOf("n");
+alert("Index of 'n' in 'Pakistani': " + indexN);
+
+let lastIndexL = "Hello World".lastIndexOf("l");
+alert("Last index of 'l' in 'Hello World': " + lastIndexL);
+
+let charAtThirdIndex = "Pakistani".charAt(3);
+alert("Character at 3rd index in 'Pakistani': " + charAtThirdIndex);
+
+let fullNameConcat = firstName.concat(" ", lastName);
+alert("Hello, " + fullNameConcat + "!");
+
+let city = "Hyderabad";
+let replacedCity = city.replace("Hyder", "Islam");
+alert("Replaced city name: " + replacedCity);
+let message = "Ali and Sami are best friends. They play cricket and football together.";
+let newMessage = message.replace(/and/g, "&");
+alert("Modified message: " + newMessage);
+
+
+let strNumber = "472";
+let number = Number(strNumber);
+alert("Value: " + number + ", Type: " + typeof number);
+
+let userInput = prompt("Enter some text:");
+alert("Uppercase: " + userInput.toUpperCase());
+let titleCaseInput = prompt("Enter some text:");
+let titleCased = titleCaseInput.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+alert("Title Case: " + titleCased);
+var num = 35.36;
+var strNum = num.toString().replace('.', '');
+alert("Result: " + strNum);
+let username = prompt("Enter your username:");
+if (/[@.,!]/.test(username)) {
+    alert("Invalid username. Please enter a valid username.");
+} else {
+    alert("Username is valid.");
+}
+
+
+let items = ["cake", "apple pie", "cookie", "chips", "patties"];
+let searchItem = prompt("Enter an item to search for:");
+let found = items.some(item => item.toLowerCase() === searchItem.toLowerCase());
+alert(found ? "Item found!" : "Item not found.");
+
+let password = prompt("Enter your password:");
+if (/^(?=.*[a-zA-Z])(?=.*[0-9])(?=.{6,})/.test(password) && !/^\d/.test(password)) {
+    alert("Password is valid.");
+} else {
+    alert("Invalid password. Make sure it meets the criteria.");
+}
+var university = "University of Karachi";
+var universityArray = university.split(" ");
+alert("Array elements: " + universityArray.join(", "));
+
+var input =  prompt("Enter some text:");
+alert("Last character: " + userInput.charAt(userInput.length - 1));
+let sentence = "The quick brown fox jumps over the lazy dog";
+let count = (sentence.toLowerCase().match(/the/g) || []).length;
+alert("Number of occurrences of 'the': " + count);
+
+    </script>
+
+
+</body>
+</html>

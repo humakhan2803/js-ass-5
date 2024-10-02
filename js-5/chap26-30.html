@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let positiveInteger = parseFloat(prompt("Enter a positive integer:"));
+if (positiveInteger > 0) {
+    document.write("Number: " + positiveInteger + "<br>");
+    document.write("Round off value: " + Math.round(positiveInteger) + "<br>");
+    document.write("Floor value: " + Math.floor(positiveInteger) + "<br>");
+    document.write("Ceil value: " + Math.ceil(positiveInteger) + "<br>");
+} else {
+    alert("Please enter a positive integer.");
+}
+
+let negativeFloat = parseFloat(prompt("Enter a negative floating point number:"));
+if (negativeFloat < 0) {
+    document.write("Number: " + negativeFloat + "<br>");
+    document.write("Round off value: " + Math.round(negativeFloat) + "<br>");
+    document.write("Floor value: " + Math.floor(negativeFloat) + "<br>");
+    document.write("Ceil value: " + Math.ceil(negativeFloat) + "<br>");
+} else {
+    alert("Please enter a negative floating point number.");
+}
+
+let number = parseFloat(prompt("Enter a number to find its absolute value:"));
+let absoluteValue = Math.abs(number);
+document.write("Absolute value of " + number + " is " + absoluteValue);
+
+let diceValue = Math.floor(Math.random() * 6) + 1; // Generates a number between 1 and 6
+document.write("Dice rolled: " + diceValue);
+let coinToss = Math.random() < 0.5 ? "Heads" : "Tails"; // Randomly chooses between Heads and Tails
+document.write("Coin toss result: " + coinToss);
+
+
+let randomNumber = Math.floor(Math.random() * 100) + 1; // Generates a number between 1 and 100
+document.write("Random number between 1 and 100: " + randomNumber);
+
+let weightInput = prompt("Enter your weight (e.g., 50, 50kgs, 50.2kgs, 50.2kilograms):");
+let weight = parseFloat(weightInput); // Parse the weight as a float
+document.write("Your weight is: " + weight + " kilograms");
+
+let secretNumber = Math.floor(Math.random() * 10) + 1; // Generates a random number between 1 and 10
+let userGuess = parseInt(prompt("Guess a number between 1 and 10:"));
+if (userGuess === secretNumber) {
+    alert("Congratulations! You guessed the correct number.");
+} else {
+    alert("Sorry, the correct number was " + secretNumber + ".");
+}
+
+
+    </script>
+
+
+
+</body>
+</html>
